@@ -1,0 +1,472 @@
+html {
+  font-family: 'Karma',sans-serif;
+  font-size: 16px;
+  background-color: hsl(313, 5%, 89%);
+}
+strong {
+  font-weight: bold;
+  color: #051d22
+}
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+p {
+  line-height: 1.5rem;
+}
+
+/* ------------------- Multi-Section Code ------------------ */
+
+.banner {
+  background: hsl(192, 100%, 29%); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, white, hsl(313, 60%, 28%)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, white, hsl(313, 60%, 28%)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, white, hsl(313, 60%, 28%)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, white,  hsl(313, 60%, 28%)); /* Standard syntax (must be last) */
+}
+.learning {
+  background: hsl(192, 100%, 29%); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, hsl(33, 99%, 49%), white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, hsl(33, 99%, 49%), white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, hsl(33, 99%, 49%), white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, hsl(33, 99%, 49%), white); /* Standard syntax (must be last) */
+}
+.guest, .newyork, .campus, .orient, .fisma {
+  border-bottom: 1px solid hsl(200, 3%, 96%);
+}
+.orient, .fisma {
+  border-top: 1px solid hsl(200, 3%, 96%);
+}
+.course img, .logo img, .banner-img img, .info-left img {
+  width: 100%;
+  height: auto;
+}
+.info-text a, .thesis-right a {
+  color: hsl(33, 99%, 49%);
+}
+.info-text a:hover, .thesis-right a:hover {
+  padding: .25rem .25rem;
+  border: 1px solid hsl(33, 99%, 49%);
+  border-radius: .25rem;
+  text-decoration: none;
+}
+
+
+/* ------------------- HEADER ------------------ */
+header {
+  height: 4.31rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  background-color: /*hsl(237, 7%, 76%)*/ hsl(176, 40%, 58%);
+  color: hsl(192, 100%, 29%);
+  border-bottom: hsl(313, 60%, 28%) solid 4px;
+  /*border-bottom: hsl(33, 99%, 49%) solid 3px;*/
+}
+
+header a{
+  color: hsl(192, 100%, 29%);
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+  text-decoration-color: hsl(33, 99%, 49%);
+}
+
+.logo {
+  margin-left: 1.5rem;
+  height: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  align-items: center;
+  font-size: 1.35rem;
+  font-family: 'Martel Sans',sans-serif;
+}
+nav {
+  font-size: 1.25rem;
+  padding-right: 1.5rem;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul li {
+  padding-left: 1rem;
+}
+.phone-nav {
+  display:none;
+}
+/* --------  Mobile Responsiveness for Header section -------- */
+@media screen and (max-width: 750px) {
+  .logo, .desktop-nav{
+    display: none;
+  }
+  .phone-nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  nav,nav ul li {
+    padding: 0;
+  }
+  nav {
+    width: 100%;
+  }
+}
+
+/* ------------------- Banner ------------------ */
+.banner {
+  max-width: 100%;
+  padding: 6rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.banner-img {
+  max-width: 60%;
+}
+.banner-text {
+  max-width: 30%;
+  margin: 0 auto;
+}
+
+.banner .banner-button {
+  color: white;
+  padding: .5rem;
+  max-width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.25rem;
+  background-color: hsl(192, 100%, 29%);
+  border-radius: .5rem;
+  transition: all 500ms ease-out;
+}
+
+.banner .banner-button:hover {
+  background-color: hsl(33, 99%, 49%);
+}
+
+.banner-text h3 {
+  font-size: 1.5rem;
+  padding: 1.5rem 0;
+}
+/* --------  Mobile Responsiveness for Banner section -------- */
+@media screen and (max-width:1140px) {
+  .banner-text {
+    max-width: 35%;
+  }
+  .banner .button {
+    max-width: 87.5%
+  }
+}
+@media screen and (max-width: 986px) {
+  .banner-text h2 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 695px) {
+  .banner {
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 0 0 0;
+  }
+  .banner-img, .banner-text {
+    max-width: 100%;
+  }
+  .banner .button {
+    max-width: 100%;
+  }
+  .banner-text {
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+  .banner-text h3 {
+    padding:2rem 0 1.5rem 0;
+  }
+}
+
+/* ------------------- Information ------------------ */
+.information {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 2px 0;
+}
+.info-left {
+  max-width: 58%;
+  max-height: 100%;
+  padding: 2rem 1.5rem;
+}
+.info-left-text h2 {
+  padding: 2rem 0 1.5rem 0;
+}
+.info-left-text p {
+  margin-bottom: 2rem;
+}
+.info-left-text span {
+  font-size: .75rem;
+  padding-top: 2rem;
+}
+.info-right {
+  max-width: 40%;
+  max-height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+.info {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.info img {
+  max-width: 35%;
+  height: auto;
+}
+.info img.info-mob {
+  display: none;
+}
+.info-right h3 {
+  color: hsl(313, 60%, 28%);
+}
+.info-text {
+  padding: 0rem 1.5rem;
+  max-width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info-text p {
+  padding: 8px 0;
+}
+/* --------  Mobile Responsiveness for Information section -------- */
+@media screen and (max-width: 1090px) {
+  .info-left-text h2 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 890px) {
+  .info-left {
+    display: none;
+  }
+  .info-right,.info {
+    max-width: 100%;
+  }
+  .info-right {
+    width: 100%;
+  }
+  .guest {
+    background-color: inherit;
+    border-bottom: none;
+  }
+  .orient,.info-right {
+    border: none;
+  }
+}
+@media screen and (max-width: 695px) {
+  .info img.info-desk {
+    display: none;
+  }
+  .info img.info-mob {
+    display: block;
+  }
+  .information {
+    margin-top: 0;
+  }
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .info img {
+    max-width: 100%;
+    width: 100%;
+  }
+  .info-text {
+    padding-top: 2rem;
+    padding-left: 1rem;
+  }
+}
+
+/* ------------------- Learning/Courses ------------------ */
+.learning {
+  max-width: 100%;
+  padding: 2rem 3.5rem;
+}
+.learn-top h2 {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.course {
+  width: 30%;
+  margin: 1rem;
+  color: white;
+  background: hsl(176, 40%, 58%);
+}
+
+.course-text {
+  padding: 1rem;
+  height: 8.75rem;
+}
+.course-text h3 {
+  padding-bottom: .5rem;
+}
+.course-text h6 {
+  padding: .5rem 0;
+  color: hsl(313, 60%, 28%);
+}
+/* --------  Mobile Responsiveness for Learning section -------- */
+@media screen and (max-width: 995px) {
+  .course-text h6,.course-text p {
+    display: none;
+  }
+  .course-text {
+    height: 3.5rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 695px) {
+  .learning {
+    background-color: inherit;
+    border-top: 1px solid #327f8E;
+    padding: 2rem 0;
+  }
+  .learn-top h2{
+    padding-bottom: 1rem;
+  }
+  .courses {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .course {
+    max-width: 100%;
+    width: 100%;
+    margin: .5rem 0;
+    color: white;;
+  }
+  .course img{
+    display: none;
+  }
+  .course-text {
+    height: auto;
+    text-align: left;
+  }
+}
+/* ------------------- Thesis  ------------------ */
+.thesis-main {
+  max-width: 100%;
+  margin: 2rem 0 2rem 1.5rem;
+}
+.thesis-main h2 {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.thesis {
+  display: flex;
+  max-width: 100%;
+}
+.thesis-right, .thesis-left {
+  display: flex;
+  flex-direction: column;
+}
+.thesis-left {
+  max-width: 59%;
+}
+.thesis-left video {
+ width: 100%;
+ height: auto;
+}
+.thesis-text {
+  padding-top: 1.5rem;
+}
+.thesis-text h3 {
+  padding-bottom: 1rem;
+}
+.thesis-right {
+  max-width: 40%;
+  margin-left: 1.5rem;
+}
+.thesis-right h3 {
+  color: hsl(313, 60%, 28%);
+}
+.thesis-right .item-text p {
+  padding: 8px 0;
+}
+.thesis-right .item {
+  display: flex;
+  padding: 1rem;
+}
+.thesis-right .item img {
+  height: 100%;
+  width: 35%;
+}
+.thesis-right .item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+.item-text h3 {
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+}
+/* --------  Mobile Responsiveness for Thesis section -------- */
+@media screen and (max-width: 929px) {
+  .thesis-main {
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    border-top: 1px solid #327f8E;
+  }
+  .thesis-left {
+    max-width: 100%;
+  }
+  .thesis-text ,.thesis-right {
+    display: none;
+  }
+  .thesis-left h2 {
+    padding-bottom: 1rem;
+  }
+}
+/* ------------------- Footer Section ------------------ */
+footer {
+  padding: 1rem 1.5rem 4rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: hsl(176, 40%, 58%);
+}
+footer ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer ul li {
+  padding-left: 1rem;
+}
+footer a{
+  color: white;
+}
+/* --------  Mobile Responsiveness for Footer section -------- */
+@media screen and (max-width: 695px) {
+  .closer {
+    display: none;
+  }
+  footer {
+    padding: 1rem;
+    border: none;
+  }
+}
